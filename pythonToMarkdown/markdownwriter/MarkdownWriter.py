@@ -120,8 +120,8 @@ class MarkdownWriter():
 		else:
 			self.stream += ")"
 
-	def addImage( self, imageUrl, imageTitle="", altText="text", style=None ):
-		self.stream += "![Alt " + altText + "]"
+	def addImage( self, imageUrl, imageTitle="", altText="", style=None ):
+		self.stream += "![" + altText + "]"
 		self.stream += "(" + imageUrl + " \"" + imageTitle + "\")"
 		if style:
 			self.stream += '{'
